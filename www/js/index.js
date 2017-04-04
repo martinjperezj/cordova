@@ -53,10 +53,10 @@ var app = {
   var idActual="";
     var push = PushNotification.init({
             android: {
-                senderID: "582303144798"//ninth-victor-163006
+                senderID: "1111111"//ninth-victor-163006
 
-                //api --AIzaSyC29mBl4muR4ur8v40P4wBh2ZPbMcPe_gU
-                //582303144798
+                //api --111
+                //1111
             },
             ios: {
                 alert: "true",
@@ -98,7 +98,7 @@ var app = {
 //boton login------
  $("#boton1").click(function(e){
     e.preventDefault();
-    $.getJSON("http://factucode.com/pruebacinde/ComprobarUsuarios.php",
+    $.getJSON("http://localhost/..../ComprobarUsuarios.php",
           {usuario:$("#usuario").val(),contrasena:$("#contrasena").val(),boton:"login",idEquipo:$("#id").val()},
         function(data){
           if (data=="FORMATO INCORRECTO"){
@@ -147,7 +147,7 @@ if(value=="Admin"){
 
 $.ajax({
     type:"POST",
-    url:"http://factucode.com/pruebacinde/ComprobarUsuarios.php",
+    url:"http://localhost/..../ComprobarUsuarios.php",
     data: { desplegable:"mostrar"}
     }).done(function(info){//trae la informacion del servidor
         var select=$("#id_usuario");
@@ -209,7 +209,7 @@ setInterval(function notificar()  {
  setInterval(function notificar()  {
              $.ajax({
                             type:"POST",
-                            url:'http://factucode.com/pruebacinde/notificacionesMias.php',//localhost/pruebaCordova2
+                            url:'http://localhost/..../notificacionesMias.php',//localhost/pruebaCordova2
                             data: {submit:"submit",usuarioToken:$("#id_usuario option:selected").text()}//enviar a este usuario
                         }).done(function(info){//trae la informacion del servidor
 
@@ -314,7 +314,7 @@ $("#noti").click(function(e){
                 //si admin
                      $.ajax({
                         type:"POST",
-                        url:'http://factucode.com/pruebacinde/insertar.php',//localhost/pruebaCordova2
+                        url:'http://localhost/..../insertar.php',//localhost/pruebaCordova2
                         data: {entra:"entra", idUsuario:$("#id_usuario option:selected").val(),mensaje:$("#mensaje").val()/*,id:$("#id").val()*/   }
                       }).done(function(info){//trae la informacion del servidor
                          // console.log(info);
@@ -332,8 +332,8 @@ $("#noti").click(function(e){
     //ver avisos       
         setInterval(function ver()  {
              $.ajax({
-                 type:"POST",//http://factucode.com/pruebacinde/leeravisos.php//185.42.104.198
-                 url:"http://factucode.com/pruebacinde/leeravisos.php"//192.168.0.127:80  /////'http://urldetuservidor/reply.php'
+                 type:"POST",
+                 url:"http://localhost/..../leeravisos.php"//192.168.0.127:80  /////'http://urldetuservidor/reply.php'
               }).done(function(info){//trae la informacion del servidor
                   //console.log(info);
                     $("#notificacion").val(info);
