@@ -1,0 +1,50 @@
+<?php 
+session_start("algo");
+ ?>
+
+<!DOCTYPE html>
+<html> 
+<head>
+    <title>Login</title>
+
+<!-- Versión compilada y comprimida del CSS de Bootstrap -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+<!-- mis stylos -->
+<link href="css/css.css" rel="stylesheet">
+
+</head>
+<body id="gradiente">
+    
+            <div id="login">
+                <h1 style="color: #3f836a ;
+                            text-align: center">Login</h1>
+                <form class="form-inline" action="http://192.168.0.127:80/pruebaCordova2/ComprobarUsuario.php">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input  type="text" class="form-control" name="usu" id="usuario" placeholder="Email">
+                      </div>
+                      <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        <input  type="password" class="form-control" name="contra" id="contrasena" placeholder="Password">
+                      </div>
+                      <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-wrench"></i></span>
+                        <textarea  type="text" id="id" name="id" disabled <!--style="display:none;"-->></textarea>
+                      </div>
+                    <br>
+                    <input type="submit" value="Login" id="boton1" class="btn btn-info">
+                </form>
+            </div>
+
+
+            <div id="respuesta">
+
+            </div>
+<p id="idDispositivo"></p>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/menu.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

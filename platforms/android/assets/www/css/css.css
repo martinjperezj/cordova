@@ -1,0 +1,22 @@
+#respuestaAA{
+	position:relative;
+	height:400px;
+	border: 1px solid blue;
+}
+
+#login{
+	position:relative;
+	height:40px;
+        width: 400PX;
+	left: 35%;
+        top: 150px;
+}
+
+#gradiente {
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, green , yellow); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, green, yellow); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, green, yellow); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, green , yellow); /* Standard syntax */
+
+}
