@@ -53,7 +53,7 @@ var app = {
   var idActual="";
     var push = PushNotification.init({
             android: {
-                senderID: "1111111"//ninth-victor-163006
+                senderID: "1111111"//n06
 
                 //api --111
                 //1111
